@@ -40,9 +40,9 @@ model.compile(loss='categorical_crossentropy',
               metrics=['accuracy'])
 history = model.fit(x_train, y_train,
                     batch_size=64,
-                    epochs=8,
+                    epochs=1,
                     verbose=1,
                     validation_data=(x_test, y_test))
 
 # save the model in an HDF5 file, built in to keras
-model.save('var/data/mnist.h5')
+model.save('mnist.h5')
